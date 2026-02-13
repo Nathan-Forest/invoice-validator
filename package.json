@@ -1,0 +1,14 @@
+{
+  "name": "invoice-validator",
+  "version": "1.0.0",
+  "description": "A JavaScript invoice validation and calculation tool for detecting errors and verifying financial data",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+    "start": "node src/index.js"
+  },
+  "keywords": ["invoice", "validation", "financial", "automation"],
+  "author": "Nathan Forest",
+  "license": "MIT",
+  "type": "commonjs"
+}
