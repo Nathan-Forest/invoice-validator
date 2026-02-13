@@ -2,7 +2,8 @@
  * Invoice Validator
  * Contains all validation logic for invoices
  */
-
+const CalculationUtils = require('../utils/calculationUtils');
+const DateValidator = require('./dateValidator');
 class InvoiceValidator {
   
   /**
@@ -15,6 +16,12 @@ class InvoiceValidator {
     
     // Validate required fields
     errors.push(...this.validateRequiredFields(invoice));
+
+    // Validate required fields
+    errors.push(...this.validateRequiredFields(invoice));
+
+    // Validate date
+    errors.push(...this.validateDate(invoice));
     
     // Validate line items
     errors.push(...this.validateLineItems(invoice));
@@ -27,6 +34,7 @@ class InvoiceValidator {
       errors: errors,
       errorCount: errors.length
     };
+    
   }
   
   /**
@@ -137,6 +145,24 @@ class InvoiceValidator {
       errors.push({
         field: 'total',
         message: `Total mismatch. Expected: ${expectedTotal.toFixed(2)}, Got: ${invoice.total.toFixed(2)}`,
+        severity: 'error'
+      });
+    }
+    
+    return errors;
+  }
+  /**
+   * Validate invoice date
+   */
+  static validateDate(invoice) {
+    const errors = [];
+    
+    const dateValidation = DateValidator.validateInvoiceDate(invoice.invoiceDate);
+    
+    if (!dateValidation.isValid) {
+      errors.push({
+        field: 'invoiceDate',
+        message: dateValidation.message,
         severity: 'error'
       });
     }
