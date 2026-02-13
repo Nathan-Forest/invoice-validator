@@ -4,11 +4,21 @@
   "description": "A JavaScript invoice validation and calculation tool for detecting errors and verifying financial data",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test.watch": "jest --watch",
+    "test.coverage": "jest --coverage",
     "start": "node src/index.js"
   },
-  "keywords": ["invoice", "validation", "financial", "automation"],
+  "keywords": [
+    "invoice",
+    "validation",
+    "financial",
+    "automation"
+  ],
   "author": "Nathan Forest",
   "license": "MIT",
-  "type": "commonjs"
+  "type": "commonjs",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
 }
