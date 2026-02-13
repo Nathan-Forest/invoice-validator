@@ -331,8 +331,8 @@ SOFTWARE.
 ## 👤 Author
 
 **Nathan Forest**
-- GitHub: [@YOUR-USERNAME](https://github.com/Nathan-Forest)
-- LinkedIn: [Your LinkedIn](www.linkedin.com/in/nathan-forest-b8a0a867)
+- GitHub: [@Nathan-Forest](https://github.com/Nathan-Forest)
+- LinkedIn: [Nathan Forest](www.linkedin.com/in/nathan-forest-b8a0a867)
 
 ---
 
